@@ -16,7 +16,7 @@ kind: Component
 metadata:
   name: ui
   description: |
-    Main service for storing new customer quotes for home and auto.
+    Frontend react UI for globalcorp.
   links:
     - title: Website
       url: http://harness.io
