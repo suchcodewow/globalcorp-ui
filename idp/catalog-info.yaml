@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: uiowner
+  description: ui owner
+spec:
+  type: business-unit
+  profile:
+    displayName: UI Team
+  children:
+    - other
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ui
+  description: |
+    Main service for storing new customer quotes for home and auto.
+  links:
+    - title: Website
+      url: http://harness.io
+  annotations:
+    harness.io/pipelines: |
+      Build and Deploy: https://app.harness.io/ng/account/IFG41DWvSnaRLOVNB2uesg/module/cd/orgs/default/projects/globalcorp/pipelines/BadApi/pipeline-studio?storeType=INLINE
+
+  tags:
+    - globalcorp
+spec:
+  type: service
+  owner: uiowner
+  lifecycle: experimental
